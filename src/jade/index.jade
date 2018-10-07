@@ -1,0 +1,94 @@
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(href="assets/css/style.css", rel="stylesheet", type='text/css')
+    link(href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet")
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    title Cipto Hartanto
+  body
+    .container
+      .container-left
+      .container-right#intro.hidden
+        .content-wrapper
+          h1.heading
+            | Cipto Hartanto
+            br
+            | an HTML + Sass engineer
+            br
+            | now in Taipei
+
+          ul.socials.main-socials
+            li.socials-item
+              a.socials-link(href="")
+                include svg-code/ico-about.html
+            li.socials-item
+              a.socials-link(href="")
+                include svg-code/ico-mail.html
+            li.socials-item
+              a.socials-link(href="")
+                include svg-code/ico-linkedin.html
+            li.socials-item
+              a.socials-link(href="")
+                include svg-code/ico-ig.html
+
+      .container-right#about.hidden
+        .content-wrapper
+          ul.socials.about-socials
+            li.socials-item
+              a.socials-link(href="")
+                include svg-code/ico-mail.html
+            li.socials-item
+              a.socials-link(href="")
+                include svg-code/ico-linkedin.html
+            li.socials-item
+              a.socials-link(href="")
+                include svg-code/ico-ig.html
+          
+          a.klos#close(href="#") [x]
+
+          h2
+            p.heading
+              | Cipto Hartanto was born in Indonesia and moved to Taipei in March 2012. In 2014, he graduated from National Taipei University with a Master Degree in Interactive Media Design.
+            br
+            p.heading
+              | He loves photography, traveling, culinary, and teasing Zom-Zom  
+              span.ico-rabrab(title='a rabrab or a rabbit') 
+                include svg-code/ico-rabrab.html
+              span .
+            br
+            p.heading
+              | He works as a Markup Engineer at LINE. He is into Jade, Sass/SCSS, Vue.js as well as Gulp and Jekyll.
+
+
+      .container-right#contact
+        .content-wrapper
+          ul.socials.about-socials
+            li.socials-item
+              a.socials-link(href="")
+                include svg-code/ico-about.html
+            li.socials-item
+              a.socials-link(href="")
+                include svg-code/ico-linkedin.html
+            li.socials-item
+              a.socials-link(href="")
+                include svg-code/ico-ig.html
+          
+          a.klos#close(href="#") [x]
+
+          form.formulir(method="POST")
+            input.formulir-input(type="text" placeholder="name" name="sender's name" required)
+            input.formulir-input(type="email" placeholder="email" name="sender's email" required)
+            textarea.formulir-style(rows=3 placeholder="say hi! (:" name ="sender's message" required)
+            button.formulir-button(type="submit") [send]
+    a.logo-standby(href="#")
+      include svg-code/ico-cipto.html
+      
+
+              
+
+
