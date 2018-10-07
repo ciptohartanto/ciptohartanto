@@ -3,10 +3,18 @@
   width: 80vw
   margin: auto
   height: 80vh
+  @media (min-width: 320px) and (max-width: 587px)
+    height: 100vh
   
   &-left,
   &-right
      width: 50%
+     @media (min-width: 320px) and (max-width: 587px)
+       width: 100%
+  
+  &-left
+    @media (min-width: 320px) and (max-width: 587px)
+      display: none
 
   &-left
     background-image: url(../img/cover.png)
@@ -20,6 +28,9 @@
     margin-left: 60px
     display: flex
     align-items: center
+    @media (min-width: 320px) and (max-width: 450px)
+      margin-left: 0
+      text-align: center
 
 
 
