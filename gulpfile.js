@@ -132,6 +132,6 @@ gulp.task('serve', function () {
 // });
 
 
-gulp.task('default', function () {
+gulp.task('build', function () {
   runSequence('cleanDist', 'cleanSCSS', 'copy-assets', 'sass', 'jade', 'serve');
 });
