@@ -117,7 +117,7 @@ gulp.task('serve', function () {
   gulp.watch(base.source + paths.sass + "**/*.sass").on('change', browserSync.reload);
   gulp.watch(base.source + paths.jade + "*.jade").on('change', browserSync.reload);
   gulp.watch(base.source + paths.images + "**/*").on('change', browserSync.reload);
-  gulp.watch(base.source + paths.scripts + '**/*').on('change', browserSync.reload);
+  // gulp.watch(base.source + paths.scripts + '**/*').on('change', browserSync.reload);
   gulp.watch(base.source + paths.sprite + '*.png').on('change', browserSync.reload);
 
   

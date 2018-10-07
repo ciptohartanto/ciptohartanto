@@ -13,7 +13,7 @@ html(lang="en")
   body
     .container
       .container-left
-      .container-right#intro.hidden
+      .container-right#intro
         .content-wrapper
           h1.heading
             | Cipto Hartanto
@@ -24,23 +24,23 @@ html(lang="en")
 
           ul.socials.main-socials
             li.socials-item
-              a.socials-link(href="")
+              a.socials-link(href="#about")
                 include svg-code/ico-about.html
             li.socials-item
-              a.socials-link(href="")
+              a.socials-link(href="#contact")
                 include svg-code/ico-mail.html
             li.socials-item
-              a.socials-link(href="")
+              a.socials-link(href="https://")
                 include svg-code/ico-linkedin.html
             li.socials-item
-              a.socials-link(href="")
+              a.socials-link(href="https://")
                 include svg-code/ico-ig.html
 
       .container-right#about.hidden
         .content-wrapper
           ul.socials.about-socials
             li.socials-item
-              a.socials-link(href="")
+              a.socials-link(href="#contact")
                 include svg-code/ico-mail.html
             li.socials-item
               a.socials-link(href="")
@@ -65,17 +65,17 @@ html(lang="en")
               | He works as a Markup Engineer at LINE. He is into Jade, Sass/SCSS, Vue.js as well as Gulp and Jekyll.
 
 
-      .container-right#contact
+      .container-right#contact.hidden
         .content-wrapper
           ul.socials.about-socials
             li.socials-item
-              a.socials-link(href="")
+              a.socials-link(href="#about")
                 include svg-code/ico-about.html
             li.socials-item
-              a.socials-link(href="")
+              a.socials-link(href="https://")
                 include svg-code/ico-linkedin.html
             li.socials-item
-              a.socials-link(href="")
+              a.socials-link(href="https://")
                 include svg-code/ico-ig.html
           
           a.klos#close(href="#") [x]
@@ -85,8 +85,13 @@ html(lang="en")
             input.formulir-input(type="email" placeholder="email" name="sender's email" required)
             textarea.formulir-style(rows=3 placeholder="say hi! (:" name ="sender's message" required)
             button.formulir-button(type="submit") [send]
-    a.logo-standby(href="#")
+    a.logo-standby(href="#intro")
       include svg-code/ico-cipto.html
+
+
+    script(src="assets/js/jquery-3.3.1.slim.min.js")
+
+    script(src="assets/js/uink.js" type="text/javascript")
       
 
               
