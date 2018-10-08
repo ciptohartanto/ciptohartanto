@@ -4,6 +4,8 @@
   width: 328px
   margin-left: auto
   margin-right: auto
+  @media (min-width: 320px) and (max-width: 587px)
+    width: 100%
   &-style
     position: relative
     display: inline-block
@@ -12,6 +14,11 @@
     padding: 0 17px 5px
     width: 100%
     margin-bottom: 10px
+    border-radius: 0
+    &:focus
+      outline: none
+      border-color: red
+      transition: .2s all ease-in
     
   &-input
     @extend .formulir-style
@@ -20,4 +27,10 @@
   &-button
     display: block
     margin: 30px auto 0
+    background: none
+    transition: .2s all ease-in-out
+    &:hover
+      transition: .2s all ease-in-out
+      background: red
+      color: #fff
     
