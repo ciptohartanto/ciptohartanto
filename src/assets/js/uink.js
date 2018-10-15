@@ -19,6 +19,6 @@ $(window).focus(function() {
 });
 
 $(window).blur(function() {
-  document.title = '(' + 'ã£' + 'â—•' +'â€¿' +'â—•'  + ')' + 'ã£';
+  document.title = 'I miss you <3';
 });
 });
