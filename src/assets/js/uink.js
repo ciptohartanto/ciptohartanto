@@ -12,5 +12,13 @@ $("#close, .logo-standby").click(function(){
 });
 
 
+//fun title changes when not active
+$(window).focus(function() {
 
+  document.title = $("meta[property='og:title']").attr("content");
+});
+
+$(window).blur(function() {
+  document.title = '(' + 'ã£' + 'â—•' +'â€¿' +'â—•'  + ')' + 'ã£';
+});
 });
