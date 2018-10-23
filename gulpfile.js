@@ -55,7 +55,7 @@ gulp.task('copy-assets', function () {
 gulp.task('jade', function () {
   return gulp.src(base.source + paths.jade + "/*.jade")
     .pipe(jade({
-      pretty: true,  // uncompressed
+      pretty: false,  // uncompressed
     }))
     .pipe(gulp.dest(base.dist));
 });
@@ -65,7 +65,7 @@ gulp.task('jade', function () {
 gulp.task('sass', function () {
   return gulp.src(base.source + paths.sass + "**/*.sass")
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(sass(outputStyle: 'compressed'))
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
     .pipe(gulp.dest(base.dist + paths.css))
     .pipe(browserSync.stream());
