@@ -13,6 +13,7 @@
     "sass-convert": "^0.5.2"
   },
   "dependencies": {
+    "gulp-htmlmin": "^5.0.1",
     "gulp-svg-sprite": "^1.4.0",
     "gulp-svg-sprites": "^4.1.2"
   }

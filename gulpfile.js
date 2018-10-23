@@ -10,6 +10,7 @@ var spritesmith = require('gulp.spritesmith');
 var sourcemaps = require('gulp-sourcemaps');
 var converter = require('sass-convert');
 var svgSprite = require("gulp-svg-sprites");
+var htmlmin = require('gulp-htmlmin');
 
 
 // variables of base
@@ -53,7 +54,7 @@ gulp.task('copy-assets', function () {
 
 // jade is to compile Jade and Pug files to HTML
 gulp.task('jade', function () {
-  return gulp.src(base.source + paths.jade + "/*.jade")
+  return gulp.src(base.source + paths.jade + "**/*.jade")
     .pipe(jade({
       pretty: false,  // uncompressed
     }))
@@ -65,7 +66,9 @@ gulp.task('jade', function () {
 gulp.task('sass', function () {
   return gulp.src(base.source + paths.sass + "**/*.sass")
     .pipe(sourcemaps.init())
-    .pipe(sass(outputStyle: 'compressed'))
+    .pipe(sass({
+      outputStyle: 'compressed'
+        }))
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
     .pipe(gulp.dest(base.dist + paths.css))
     .pipe(browserSync.stream());
@@ -99,6 +102,12 @@ gulp.task('svg-sprites', function () {
         }
       }))
       .pipe(gulp.dest("src/"));
+});
+
+gulp.task('minify', () => {
+  return gulp.src('src/jade/svg-code/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('src/jade/svg-code'));
 });
 
 // Serve is starting BrowserSync
@@ -137,5 +146,5 @@ gulp.task('default', function () {
 });
 
 gulp.task('netlify', function () {
-  runSequence('cleanDist', 'cleanSCSS', 'copy-assets', 'sass', 'jade');
+  runSequence('cleanDist', 'cleanSCSS', 'copy-assets', 'sass', 'jade', 'minify');
 });
