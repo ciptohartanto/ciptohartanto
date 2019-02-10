@@ -7,6 +7,7 @@
     height: 100vh
   @media (orientation: landscape)
     height: 100vh
+    overflow: hidden
   
   &-left,
   &-right
@@ -33,15 +34,19 @@
     margin-left: 60px
     display: flex
     align-items: center
+    
     @media (min-width: 320px) and (max-width: 450px)
       margin-left: 0
       text-align: center
+      justify-content: center
 
 
-.content
-  &-wrapper
-    display: block
-    width: 100%
-    @media screen and (max-width:750px) and (orientation: landscape)
-      height: 80vh
-      margin-top: 20vh
+.content-wrapper
+  display: block
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+  @media screen and (max-width:750px) and (orientation: landscape)
+    height: 80vh
+    margin-top: 40vh
+      
